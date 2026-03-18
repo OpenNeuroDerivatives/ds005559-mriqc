@@ -1,0 +1,81 @@
+_command_array:
+- code/containers/scripts/singularity_cmd run --bind /tmp:/node_tmp --bind /scratch1/03201/jbwexler/mriqc_home:/home/mriqc
+  code/containers/images/bids/bids-mriqc--25.0.0rc0.sing sourcedata/raw /scratch1/03201/jbwexler/openneuro_derivatives/derivatives/mriqc/ds005559-mriqc
+  participant --participant-label '112188' -w '/node_tmp/work_dir/mriqc/ds005559_sub-112188'
+  -vv --nprocs 11 --ants-nthreads 8 --verbose-reports --dsname ds005559 --mem_gb 30
+  --notrack --no-sub --bids-filter-file code/bids-filters.json
+- code/containers/scripts/singularity_cmd run --bind /tmp:/node_tmp --bind /scratch1/03201/jbwexler/mriqc_home:/home/mriqc
+  code/containers/images/bids/bids-mriqc--25.0.0rc0.sing sourcedata/raw /scratch1/03201/jbwexler/openneuro_derivatives/derivatives/mriqc/ds005559-mriqc
+  participant --participant-label '275592' -w '/node_tmp/work_dir/mriqc/ds005559_sub-275592'
+  -vv --nprocs 11 --ants-nthreads 8 --verbose-reports --dsname ds005559 --mem_gb 30
+  --notrack --no-sub --bids-filter-file code/bids-filters.json
+_container_command_str: code/containers/scripts/singularity_cmd run --bind /tmp:/node_tmp
+  --bind /scratch1/03201/jbwexler/mriqc_home:/home/mriqc code/containers/images/bids/bids-mriqc--25.0.0rc0.sing
+  sourcedata/raw /scratch1/03201/jbwexler/openneuro_derivatives/derivatives/mriqc/ds005559-mriqc
+  participant --participant-label '{p[sub]}' -w '/node_tmp/work_dir/mriqc/ds005559_sub-{p[sub]}'
+  -vv --nprocs 11 --ants-nthreads 8 --verbose-reports --dsname ds005559 --mem_gb 30
+  --notrack --no-sub --bids-filter-file code/bids-filters.json
+_dataset_id: a2bd22bb-e54b-4998-baaa-6634b5885309
+_extra_inputs: &id001
+- code/containers/images/bids/bids-mriqc--25.0.0rc0.sing
+_extra_inputs_array:
+- *id001
+- *id001
+_head: 1a8296049600cff79097abc38040faac66d8a228
+_inputs_array: []
+_jobid: 20250710-132815-c862
+_meta_directory: /scratch1/03201/jbwexler/openneuro_derivatives/derivatives/mriqc/ds005559-mriqc/.reproman/jobs/local/20250710-132815-c862
+_meta_directory_rel: .reproman/jobs/local/20250710-132815-c862
+_num_subjobs: 2
+_outputs_array: []
+_reproman_version: 0.4.1
+_resolved_batch_parameters:
+- sub: '112188'
+- sub: '275592'
+_resolved_command_str: sourcedata/raw /scratch1/03201/jbwexler/openneuro_derivatives/derivatives/mriqc/ds005559-mriqc
+  participant --participant-label '{p[sub]}' -w '/node_tmp/work_dir/mriqc/ds005559_sub-{p[sub]}'
+  -vv --nprocs 11 --ants-nthreads 8 --verbose-reports --dsname ds005559 --mem_gb 30
+  --notrack --no-sub --bids-filter-file code/bids-filters.json
+_spec_version: '1.0'
+_submission_id: null
+batch_parameters:
+- sub=112188,275592
+command:
+- sourcedata/raw
+- /scratch1/03201/jbwexler/openneuro_derivatives/derivatives/mriqc/ds005559-mriqc
+- participant
+- --participant-label
+- '{p[sub]}'
+- -w
+- /node_tmp/work_dir/mriqc/ds005559_sub-{p[sub]}
+- -vv
+- --nprocs
+- '11'
+- --ants-nthreads
+- '8'
+- --verbose-reports
+- --dsname
+- ds005559
+- --mem_gb
+- '30'
+- --notrack
+- --no-sub
+- --bids-filter-file
+- code/bids-filters.json
+container: code/containers/bids-mriqc
+job_name: ds005559-mriqc
+killjob_factors: .85,.25
+launcher: 'true'
+local_directory: /scratch1/03201/jbwexler/openneuro_derivatives/derivatives/mriqc/ds005559-mriqc
+mail_type: END
+mail_user: jbwexler@stanford.edu
+num_nodes: '1'
+num_processes: '2'
+orchestrator: datalad-no-remote
+queue: small
+resource_id: bc1235e8-b28c-11eb-bce1-e4434b618f52
+resource_name: local
+root_directory: /home1/03201/jbwexler/.reproman/run-root
+submitter: slurm
+walltime: '8:00:00'
+working_directory: /scratch1/03201/jbwexler/openneuro_derivatives/derivatives/mriqc/ds005559-mriqc

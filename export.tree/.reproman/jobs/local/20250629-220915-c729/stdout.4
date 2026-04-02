@@ -1,0 +1,34 @@
+[ReproMan] pre-command...
+[ReproMan] executing command code/containers/scripts/singularity_cmd run --bind /tmp:/node_tmp --bind /scratch1/03201/jbwexler/mriqc_home:/home/mriqc code/containers/images/bids/bids-mriqc--25.0.0rc0.sing sourcedata/raw /scratch1/03201/jbwexler/openneuro_derivatives/derivatives/mriqc/ds005559-mriqc participant --participant-label '275592' -w '/node_tmp/work_dir/mriqc/ds005559_sub-275592' -vv --nprocs 11 --ants-nthreads 8 --verbose-reports --dsname ds005559 --mem_gb 30 --notrack --no-sub --bids-filter-file code/bids-filters.json
+[ReproMan] ... within /scratch1/03201/jbwexler/openneuro_derivatives/derivatives/mriqc/ds005559-mriqc
+------------------------------------------------------------------
+  Running MRIQC version 25.0.0rc0
+  ----------------------------------------------------------------
+
+  NOTICE
+  Copyright © The NiPreps Developers.
+  
+  This product includes software developed by
+  the NiPreps Community (https://nipreps.org/).
+  
+  Portions of this software were developed at the Department of
+  Psychology at Stanford University, Stanford, CA, US.
+  
+  This software contains code ultimately derived from the
+  PCP Quality Assessment Protocol (QAP;
+  http://preprocessed-connectomes-project.org/quality-assessment-protocol)
+  by C. Craddock, S. Giavasis, D. Clark, Z. Shezhad, and J. Pellman.
+  
+  This software is also distributed as a Docker container image.
+  The bootstrapping file for the image ("Dockerfile") is licensed
+  under the MIT License.
+
+  ----------------------------------------------------------------
+
+  * BIDS dataset path: /scratch1/03201/jbwexler/openneuro_derivatives/derivatives/mriqc/ds005559-mriqc/sourcedata/raw.
+  * Output folder: /scratch1/03201/jbwexler/openneuro_derivatives/derivatives/mriqc/ds005559-mriqc.
+  * Analysis levels: ['participant'].
+  * BIDS filters-file: /scratch1/03201/jbwexler/openneuro_derivatives/derivatives/mriqc/ds005559-mriqc/code/bids-filters.json.
+------------------------------------------------------------------
+
+2025-06-30 05:02:48 |[33;20m IMPORTANT [0m|[33;20m mriqc            [0m|[33;20m DataLad dataset identified, attempting to `datalad get` unavailable files.[0m
